@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Basic - Add Event By Javascript</title>
+</head>
+
+<body>
+<h2>Thêm sự kiện bằng javascript</h2>
+<input type="button" id="btn" value="Click me">
+<br>
+<hr>
+<h2>Thêm sự kiện cho nhiều thẻ html bằng javascript</h2>
+<ul>
+	<li><a href="#" class="show">Tin trong nước</a></li>
+	<li><a href="#">Tin công nghệ</a></li>
+	<li><a href="#" class="show">Tin thời sự</a></li>
+</ul>
+<script>	
+	// Lấy đối tượng
+	var button = document.getElementById('btn');
+	
+	// Thêm sự kiện cho button
+	button.onclick = function() {
+		alert('Bạn vừa click vào button');
+	};
+	
+	// Lấy danh sách đối tượng theo tên class
+	var elements = document.getElementsByClassName('show');
+	for (var i = 0; i < elements.length; i++) {
+		elements[i].onclick = function() {
+			alert('Xin chào, bạn vừa click vào tôi');
+			return false;
+		};
+	}
+</script>
+</body>
+</html>

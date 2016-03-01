@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Basic - DOM Nodes</title>
+</head>
+
+<body>
+<div id="content">
+	<h5>Xin chào các bạn</h5>
+	<h5>Chúc vui vẻ khi học bài</h5>
+</div>
+<input type="button" value="View" id="btn-view">
+<input type="button" value="Remove" id="btn-remove">
+<input type="button" value="Replace" id="btn-replace">
+<script>
+	// document.createElement()
+	// Tạo mới 1 thẻ p
+	var p1 = document.createElement('p');	
+	
+	// Thêm nội dung html vào thẻ p
+	p1.innerHTML = 'Học DOM Nodes tại freetuts.net';	
+	
+	// Đưa thẻ p vào trong body
+	document.getElementsByTagName('body')[0].appendChild(p1);
+	
+	// document.createTextNode
+	// Tạo mới 1 thẻ p
+	var p2 = document.createElement('p');
+	
+	// Tạo text node
+	var textNode = document.createTextNode('Học DOM Nodes tại freetuts.net');
+	p2.appendChild(textNode);
+	
+	// Đưa thẻ p vào trong body
+	document.getElementsByTagName('body')[0].appendChild(p2);
+	
+	// insertBefore
+	// Lấy button
+	var button = document.getElementById('btn-view');
+	
+	// Thêm sự kiện click cho button
+	button.addEventListener('click', function() {
+		// Tạo mới 1 thẻ h1
+		var h1 = document.createElement('h1');
+		
+		// Thêm nội dung vào thẻ h1
+		h1.innerHTML = 'Chào mừng bạn đến với freetuts.net';
+		
+		// Lấy thẻ ngoài cùng
+		var element = document.getElementById('content');
+		
+		// Lấy thẻ cần insertBefore
+		var elementChild = document.getElementsByTagName('h5')[1];
+		
+		// Insert before
+		element.insertBefore(h1, elementChild);
+	});
+	
+	// removeChild
+	var btnRemove = document.getElementById('btn-remove');
+	
+	btnRemove.addEventListener('click', function() {
+		// Lấy thẻ cần remove
+		var elementRemove = document.getElementsByTagName('h5')[0];
+		
+		// Remove
+		document.getElementById('content').removeChild(elementRemove);
+	});
+	
+	// replaceChild
+	var btnReplace = document.getElementById('btn-replace');
+	
+	btnReplace.addEventListener('click', function() {
+		// Tạo mới 1 thẻ
+		var p = document.createElement('p');
+		p.innerHTML = 'Xin chào!';
+		
+		// Lấy thẻ cần replace
+		var replaceElement = document.getElementsByTagName('h5')[0];
+		
+		// Replace
+		document.getElementById('content').replaceChild(p, replaceElement);
+	});
+</script>
+</body>
+</html>

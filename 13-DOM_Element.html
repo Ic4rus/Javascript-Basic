@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Basic - DOM Element</title>
+</head>
+
+<body>
+<div id="div1" value="div1"></div>
+<input type="text" value="input1" hidden="true">
+<input type="text" value="input2" hidden="true">
+<input type="button" class="btn" value="Button1" hidden="true">
+<input type="button" class="btn" value="Button2" hidden="true">
+<div>
+	<input type="text" class="txt" value="input3" hidden="true">
+	<input type="text" hidden="true">
+</div>
+<script>
+	// Tìm thẻ HTML theo id
+	var element = document.getElementById('div1');
+	document.write(element.getAttribute('value'));
+	
+	// Tìm thẻ HTML theo tên thẻ
+	var elements = document.getElementsByTagName('input');
+	document.write(elements[0].value);
+	
+	// Tìm thẻ HTML theo tên class
+	elements = document.getElementsByClassName('btn');
+	document.write(elements[0].value);
+	
+	// Tìm thẻ HTMl theo cú pháp Selector CSS
+	elements = document.querySelectorAll('div input.txt');
+	document.write(elements[0].value);
+</script>
+</body>
+</html>

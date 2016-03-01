@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Basic - Array Handle Method</title>
+</head>
+
+<body>
+<script>
+	// Khai báo 1 mảng
+	var array = ['Học', 'lập', 'trình', 'tại', 'freetuts.net'];	
+
+	// Nối các phần tử trong mảng - Array.valueOf()
+	document.write(array.valueOf());
+	document.write('<br/>');
+	
+	// Thêm phần tử vào mảng - Array.push(value)
+	array.push('Miễn phí');
+	document.write(array.valueOf());
+	document.write('<br/>');
+	
+	// Xóa phần tử cuối cùng trong mảng - Array.pop()	
+	array.pop();
+	document.write(array.valueOf());
+	document.write('<br/>');
+	
+	// Xóa phần tử đầu tiên trong mảng, sau đó dồn các phần tử xuống dưới 1 bậc - Array.shift();
+	array.shift();
+	document.write(array.valueOf());
+	document.write('<br/>');
+	
+	// Thêm phần tử vào vị trí đầu tiên trong mảng, đồng thời đẩy các phần tử phía sau lên 1 bậc - Array.unshift(value)
+	array.unshift('Học');
+	document.write(array.valueOf());
+	document.write('<br/>');
+	
+	// Thêm và xóa phần tử - Array.splice(index, count, element1,..., elementN)
+	array.splice(1, 2, 'Php', 'căn bản');
+	document.write(array.valueOf());
+	document.write('<br/>');
+	
+	// Sắp xếp phần tử trong mảng - Array.sort()
+	array.sort();
+	document.write(array.valueOf());
+	document.write('<br/>');
+	
+	// Đảo ngược các phần tử lại - Array.reverse()
+	array.reverse();
+	document.write(array.valueOf());
+	document.write('<br/>');
+	
+	// Nối mảng - Array.concat(array1, ..., arrayN)
+	var array1 = ['Học', 'lập', 'trình'];
+	var array2 = ['tại', 'freetuts.net'];
+	var sumArray = array1.concat(array2);
+	document.write(sumArray.valueOf());
+	document.write('<br/>');
+	
+	// Lấy các phần tử con trong mảng - Array.slice(indexA, indexB)
+	var childArray = array.slice(3, 5);
+	document.write(childArray.valueOf());
+	document.write('<br/>');
+	
+</script>
+</body>
+</html>

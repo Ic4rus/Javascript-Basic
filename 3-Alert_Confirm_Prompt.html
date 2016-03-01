@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Basic - Alert, Confirm & Prompt</title>
+</head>
+
+<body>
+<input type="button" onClick="alert('Đây là thông báo alert')" value="Alert"/>
+<input type="button" value="Confirm" id="btnConfirm">
+<input type="button" value="Prompt" id="btnPrompt">
+<script>
+		// Lấy đối tượng theo id
+		var btnConfirm = document.getElementById('btnConfirm');
+		var btnPrompt = document.getElementById('btnPrompt');
+		
+		// Gán sự kiện cho đối tượng
+		btnConfirm.addEventListener('click', function(){
+			confirm('Đây là thông báo confirm');			
+		});
+		btnPrompt.addEventListener('click', function(){
+			var t = prompt('Đây là thông báo prompt', '');
+			alert(t);						
+		});
+		
+</script>
+</body>
+</html>

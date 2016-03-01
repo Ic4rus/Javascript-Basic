@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Basic - addEventListener</title>
+</head>
+
+<body>
+<h2>Hàm addEventListener</h2>
+<input type="text" id="txt-val" value="">
+<div id="result"></div>
+<br>
+<hr>
+<h2>Bạn hãy zoom trình duyệt</h2>
+<div id="result2"></div>
+<script>
+	// Lấy đối tượng
+	var input = document.getElementById('txt-val');
+	var result = document.getElementById('result');
+	
+	// Thêm sự kiện cho đối tượng
+	input.addEventListener('keyup', function() {
+		result.innerHTML = input.value;
+	});
+	
+	// Bổ sung hành động nữa
+	input.addEventListener('keyup', function() {
+		if (input.value.length > 5) {
+			alert('Bạn đã nhập nhiều hơn 5 ký tự');
+		}
+	});
+	
+	// Thêm sự kiện cho đối tượng window
+	window.addEventListener('resize', function() {
+		document.getElementById('result2').innerHTML = 'Bạn vừa zoom Browser';
+	});	
+	
+</script>
+</body>
+</html>

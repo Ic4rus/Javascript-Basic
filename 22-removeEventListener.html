@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Basic - removeEventListener</title>
+</head>
+
+<body>
+<div id="result"></div>
+<input type="button" value="Stop Random" id="stopRandom">
+<script>
+	var result = document.getElementById('result');
+	var button = document.getElementById('stopRandom');
+	var html = document.getElementsByTagName('html')[0];
+	
+	// Hàm sinh số ngẫu nhiên
+	function random() {
+		var randomString = Math.random();
+		result.innerHTML = randomString;
+	}
+	
+	// Hiển thị dãy số ngẫu nhiên khi di chuyển chuột
+	html.addEventListener('mousemove', random);
+	
+	// Thêm sự kiện click cho button
+	button.addEventListener('click', function() {
+		// Xóa hành động random khỏi sự kiện di chuyển chuột
+		html.removeEventListener('mousemove', random);
+	});
+</script>
+</body>
+</html>

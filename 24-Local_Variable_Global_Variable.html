@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Basic - Local Variable & Global Variable</title>
+</head>
+
+<body>
+<script>
+	// Biến toàn cục
+	var comment = 'Nội dung comment toàn cục';
+	
+	// Hàm sử dụng biến toàn cục
+	function showComment() {
+		// Biến cục bộ
+		var comment = 'Nội dung comment cục bộ';
+		alert(comment);
+	}	
+	showComment();
+	
+	// In ra biến toàn cục
+	alert(comment);	
+</script>
+</body>
+</html>

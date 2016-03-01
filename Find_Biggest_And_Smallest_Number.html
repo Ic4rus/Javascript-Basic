@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Find Biggest And Smallest Number</title>
+</head>
+
+<body>
+<script>
+function findBiggestAndSmallestNumber() {
+	// Hai biến lưu giá trị min, max
+	var min = null;
+	var max = null;
+	
+	// Biến lưu giá trị người dùng nhập vào
+	var value = ' ';
+	
+	// Nếu người dùng không ấn hủy (value = null)
+	// thì tiếp tục lặp
+	while (value != null) {
+		value = prompt('Nhập số, nếu không muốn thì đừng nhập gì');
+		if (value != null) {
+			// Nếu nhập lần đầu thì gán min, max bằng value
+			if (min == null) {
+				min = value;
+				max = value;
+			} else {
+				if (min > value) {
+					min = value;
+				}
+				if (max < value) {
+					max = value
+				}
+			}
+		}		
+	}
+	document.write('Min là: ' + min + ', Max là: ' + max);
+}
+findBiggestAndSmallestNumber();
+</script>
+</body>
+</html>

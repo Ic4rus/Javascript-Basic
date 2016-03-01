@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Basic - Event</title>
+</head>
+
+<body>
+<script>
+	// Hiển thị nội dung thẻ div theo thẻ input
+	function showResult() {
+		// Lấy 2 thẻ HTML
+		var input = document.getElementById('message');
+		var div = document.getElementById('result');
+		
+		// Gán nội dung ô input vào thẻ div
+		div.innerHTML = input.value;
+	}
+	
+	// Kiểm tra hành động copy
+	function checkCopy() {
+		alert('Bạn đã copy thành công');
+	}
+	
+	// Tính tổng
+	function sum() {
+		var input1 = document.getElementById('number1');
+		var input2 = document.getElementById('number2');
+		var result = document.getElementById('sum');
+		
+		var sum = parseInt(input1.value) + parseInt(input2.value);
+		if (!isNaN(sum)) {
+			result.value = sum;
+		}
+	}
+	
+</script>
+<input type="text" id="message" value="" onKeyUp="showResult()">
+<div id="result"></div>
+<h3>Hãy copy dòng chữ dưới đây:</h3>
+<div oncopy="checkCopy()">Chào mừng bạn đến với website freetuts.net</div>
+a: <input type="text" id="number1" value="" onKeyUp="sum()">
+b: <input type="text" id="number2" value="" onKeyUp="sum()">
+Kết quả: <input type="text" id="sum">
+</body>
+</html>

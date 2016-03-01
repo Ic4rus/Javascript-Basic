@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Basic - This</title>
+</head>
+
+<body>
+<input type="button" id="btn" value="Click me">
+<input type="button" onClick="showType(this)" value="Check">
+<script>
+	// Hàm hiển thị type của đối tượng
+	function showType(object) {
+		alert(object.type);
+	}
+	
+	// Lấy đối tượng
+	var btn = document.getElementById('btn');
+	
+	// Gán sự kiện	
+	btn.addEventListener('click', function() {
+		// Lấy thuộc tính type của chính đối tượng đang xử lý
+		alert(this.type);
+	});
+</script>
+</body>
+</html>

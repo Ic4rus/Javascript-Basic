@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Check Leap Year 2</title>
+</head>
+
+<body>
+<script>
+function checkLeapYear(year) {
+	// Nếu năm chia hết cho 100
+	// thì kiểm tra xem có chia hết cho 400 hay không
+	if (year % 100 == 0) {
+		// Nếu năm chia hết cho 400 thì là năm nhuận
+		if (year % 400 == 0) {
+			return true;
+		}
+		// Ngược lại không phải năm nhuận
+		else {
+			return false;
+		}
+	}
+	// Nếu chia hết cho 4 thì là năm nhuận
+	else if (year % 4 == 0) {
+		return true;
+	}
+	// Còn lại không phải năm nhuận
+	else {
+		return false;
+	}	
+}
+var check = checkLeapYear(2016);
+if (check) {
+	alert('Là năm nhuận');
+} else {
+	alert('Không là năm nhuận');
+}
+</script>
+</body>
+</html>
