@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Basic - Regular Expression</title>
+</head>
+
+<body>
+<script>
+	var string = 'Chào mừng bạn đến với freetuts.net';
+	var pattern = /freetuts/;
+	document.write(string + '<br>');
+	if (pattern.test(string)) {
+		document.write('Trong chuỗi có chữ freetuts.net <br>');
+	} else {
+		document.write('Trong chuỗi không có chữ freetuts.net <br>');
+	}
+	document.write('<hr>');
+	
+	string = 'hello';
+	pattern = /n+/;
+	document.write(string + '<br>');
+	if (pattern.test(string)) {
+		document.write('Trong chuỗi có chữ n <br>');
+	} else {
+		document.write('Trong chuỗi không có chữ n <br>');
+	}
+	document.write('<hr>');
+	
+	string = 'hello123';
+	pattern = /[0-9]/;
+	document.write(string + '<br>');
+	if (pattern.test(string)) {
+		document.write('Trong chuỗi có xuất hiện số');
+	} else {
+		document.write('Trong chuỗi không xuất hiện số');	
+	}
+	document.write('<hr>');
+	
+	string = 'freetuts.net';
+	pattern = /[0-9]*/;
+	document.write(string + '<br>');
+	if (pattern.test(string)) {
+		document.write('Luôn luôn chạy <br>');
+	} else {
+		document.write('Không bao giờ chạy <br>');
+	}
+	document.write('<hr>');
+	
+	string = 'hello';
+	pattern = /H/i;
+	document.write(string + '<br>');
+	if (pattern.test(string)) {
+		document.write('Có chữ h <br>');
+	} else {
+		document.write('Không có chữ h <br>');
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Basic - BOM Location</title>
+</head>
+
+<body>
+<script>
+	// Hàm reload lại trang
+	function refreshPage()  {
+		window.location.reload();
+	}
+	
+	// Hàm replace
+	function replacePage() {
+		window.location.replace('http://freetuts.net');
+	}
+	
+	function hrefPage() {
+		window.location.href = 'http://freetuts.net';
+	}
+	
+	// Load trang web mới
+	function assignPage() {
+		window.location.assign('http://freetuts.net');
+	}
+</script>
+<h2>Tải lại trang web</h2>
+<button onClick="refreshPage()">Refresh</button>
+<br>
+<hr>
+<h2>Ghi đè trang web</h2>
+<button onClick="replacePage()">Replace</button>
+<button onClick="hrefPage()">location.href</button>
+<br>
+<hr>
+<h2>Load một trang mới</h2>
+<button onClick="assignPage()">Assign</button>
+<br>
+<hr>
+<h2>Các thuộc tính của location</h2>
+<script>
+	document.write('hash:' + window.location.hash + '<br>');
+	document.write('host:' + window.location.host + '<br>');
+	document.write('hostname:' + window.location.hostname + '<br>');
+	document.write('href:' + window.location.href + '<br>');
+	document.write('origin:' + window.location.origin + '<br>');
+	document.write('pathname:' + window.location.pathname + '<br>');
+	document.write('port:' + window.location.port + '<br>');
+	document.write('search:' + window.location.search + '<br>');
+</script>
+</body>
+</html>

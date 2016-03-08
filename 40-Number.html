@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Basic - Number</title>
+</head>
+
+<body>
+<script>
+	// Khong co dau cham dong
+	var a = 12;
+	document.write('a: ' + a + ' - ' + typeof a + '<br>');
+	
+	// Co dau cham dong
+	var b = 12.5;
+	document.write('b: ' + b + ' - ' + typeof b + '<br>');
+	
+	// 12300000
+	var c = 123e5;
+	document.write('c: ' + c + ' - ' + typeof c +  '<br>');
+	
+	// 0.00123
+	var d = 123e-5;
+	document.write('d: ' + d + ' - ' + typeof d + '<br>');
+	
+	// 255
+	var e = 0xff;
+	document.write('e: ' + e + ' - ' + typeof e + '<br>');
+	
+	var f = 128;
+	f.toString(16);
+	f.toString(8);
+	f.toString(2);
+	
+	var g = 2;
+	while (g != Infinity) {
+		g = g * g;
+	}
+	document.write('g: ' + g + '<br>');
+	
+	var h = 2 / 'a';
+	document.write('h: ' + h + '<br>');
+		
+</script>
+</body>
+</html>

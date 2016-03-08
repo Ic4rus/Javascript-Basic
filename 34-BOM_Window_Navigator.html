@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Basic - Window Navigator</title>
+</head>
+
+<body>
+<script>
+	if (window.cookieEnabel) {
+		alert('Có bật Cookie <br>');		
+	} else {
+		document.write('Cookie đã bị tắt <br>');
+	}
+	document.write('App name: ' + navigator.appName + '<br>');
+	document.write('App code: ' + navigator.appCodeName + '<br>');
+	document.write('Engine: ' + navigator.product + '<br>');
+	document.write('App version: ' + navigator.appVersion + '<br>');
+	document.write('User agent: ' + navigator.userAgent + '<br>');
+	document.write('Platform: ' + navigator.platform + '<br>');
+	document.write('Language: ' + navigator.language + '<br>');
+</script>
+</body>
+</html>

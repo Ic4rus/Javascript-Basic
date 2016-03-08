@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Basic - Switch case</title>
+</head>
+
+<body>
+<script>
+	var number = parseInt(prompt('Nhập số cần kiểm tra'));
+	
+	var mod = number % 2;
+	
+	switch (mod) {
+		case 0: {
+			document.write(number + ' là số chẵn');
+			break;
+		}
+		case 1: {
+			document.write(number + ' là số lẻ');
+			break;
+		}
+		default: {
+			document.write('Ký tự bạn nhập không phải là số');
+		}
+	}
+</script>
+</body>
+</html>

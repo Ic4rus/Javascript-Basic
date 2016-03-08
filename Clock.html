@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Basic - Clock</title>
+<script>
+	// Chuyen cac so be hon 10 thanh dang 01, 02, 03, ...
+	function checkTime(i) {		
+		if (i < 10) {
+			i = '0' + i;			
+		}
+		return i;
+	}
+
+	// Khoi tao dong ho
+	function startTime() {
+		// Lay ngay hien tai
+		var date = new Date();
+		
+		// Gio, phut, giay hien tai
+		var h = date.getHours();
+		var m = date.getMinutes();
+		var s = date.getSeconds();
+		
+		// Chuyen phut, giay thanh dang 2 chu so
+		m = checkTime(m);
+		s = checkTime(s);
+		
+		// Ghi ra trinh duyet
+		document.getElementById('timer').innerHTML = h + ':' + m + ':' + s;		
+		
+		// Dung ham setTimeout de thiet lap goi lai 0.5s/lan
+		var t = setTimeout(function() {
+			startTime();
+		}, 500);
+	}		
+</script>
+</head>
+
+<body onLoad="startTime()">
+	<div id="timer"></div>
+</body>
+</html>

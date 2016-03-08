@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Basic - setTimeout & setInterval</title>
+</head>
+
+<body>
+<script>
+	
+	// Thiet lap timeout
+	var timeoutSetting = setTimeout(function() {
+		alert('Timeout');
+	}, 3000);
+	
+	// Thiet lap interval
+	var intervalSetting = setInterval(function() {
+		alert('Interval');
+	}, 5000);
+	
+	// Xoa alert
+	function clearTimeoutSetting() {
+		clearTimeout(timeoutSetting);		
+	}
+	
+	// Xoa interval
+	function clearIntervalSetting() {
+		clearInterval(intervalSetting);
+	}
+</script>
+<input type="button" value="Clear timeout" onClick="clearTimeoutSetting()">
+<input type="button" value="Clear interval" onClick="clearIntervalSetting()">
+</body>
+</html>

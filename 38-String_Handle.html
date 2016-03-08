@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Basic - String Handle</title>
+</head>
+
+<body>
+<script>
+	// Ham string.indexOf(searchString, startIndex)
+	document.write('<h2>Tìm kiếm - string.indexOf(searchString, startIndex)</h2>');
+	var string = 'Chào mừng bạn đến với freetuts.net';
+	document.write(string + '<br>');
+	document.write('string.indexOf(\'freetuts.net\'): ' + string.indexOf('freetuts.net'));
+	document.write('<hr>');
+	
+	// Ham string.lastIndexOf(searrchString, startIndex)
+	document.write('<h2>Tìm kiếm - string.lastIndexOf(searchString, startIndex)</h2>');
+	string = 'Website freetuts.net - Học lập trình miễn phí tại freetuts.net';
+	document.write(string + '<br>');
+	document.write('string.lastIndexOf(\'freetuts.net\'): ' + string.lastIndexOf('freetuts.net'));
+	document.write('<hr>');
+	
+	// Ham string.search
+	document.write('<h2>Tìm kiếm - string.search(rgExp)</h2>');
+	string = 'Chào mừng bạn đến với freetuts.net';
+	document.write(string + '<br>');
+	document.write('string.search(\'freetuts.net\'): ' + string.search('freetuts.net'));
+	document.write('<hr>');
+	
+	// Ham string.slice(start, end)
+	document.write('<h2>Cắt chuỗi con - string.slice(start, end)</h2>');
+	string = 'Welcome to freetuts.net';
+	document.write(string + '<br>');
+	document.write('string.slice(11, 23): ' + string.slice(11, 23) + '<br>');
+	document.write('string.slice(-12, 23): ' + string.slice(-12, 23) + '<br>');
+	document.write('string.slice(5): ' + string.slice(5));
+	document.write('<hr>');
+	
+	// Ham string.substring(start, end)
+	// giong ham slice nhung tham so phai lon hon 0
+	document.write('<h2>Cắt chuỗi con - string.substring(start, end)</h2>');
+	document.write(string + '<br>');
+	document.write('string.substring(11, 23): ' + string.substring(11, 23));
+	document.write('<hr>');
+	
+	// Ham string.substr(start, length)
+	document.write('<h2>Cắt chuỗi con - string.substr(start, length)</h2>');
+	document.write(string + '<br>');
+	document.write('string.substr(11, 12): ' + string.substr(11, 12));
+	document.write('<hr>');
+	
+	// Ham string.replace(rgExp, replaceText)
+	document.write('<h2>Tìm kiếm và lặp chuỗi - string.replace(rgExp, replaceText)</h2>');
+	document.write(string + '<br>');
+	document.write('string.replace(\'freetuts.net\', \'here\'): ' + string.replace('freetuts.net', 'here'));
+	document.write('<hr>');
+	
+	// Ham string.toUpperCase() - string.toLowerCase()
+	document.write('<h2>Chuyển thành chữ hoa, chữ thường - string.toUpperCase & string.toLowerCase()</h2>');
+	document.write(string + '<br>');
+	document.write('string.toUpperCase(): ' + string.toUpperCase() + '<br>');
+	document.write('string.toLowerCase(): ' + string.toLowerCase());
+	document.write('<hr>');
+	
+	// Ham string.concat(string1, ..., stringN)
+	document.write('<h2>Nối chuỗi - string.concat(string1, ..., stringN)</h2>');
+	string = 'Welcome';
+	document.write(string + '<br>');
+	document.write('string.concat(\' to\', \' freetuts.net\'): ' + string.concat(' to', ' freetuts.net'));
+	document.write('<hr>');
+	
+	// Ham string.charAt(index) & string.charCodeAt(index)
+	document.write('<h2>Tìm ký tự & mã ASCII - string.charAt(index) & string.charCodeAt(index)</h2>');
+	document.write(string + '<br>');
+	document.write('string.charAt(1): ' + string.charAt(1) + '<br>');
+	document.write('string.charCodeAt(1): ' + string.charCodeAt(1));
+	document.write('<hr>');
+	
+	// Ham string.split(separator)
+	document.write('<h2>Chuyển đổi chuỗi sang mảng - string.split(separator)</h2>');
+	string = 'Welcome to freetuts.net';
+	document.write(string + '<br>');
+	document.write('string.split(\' \'): ' + string.split(' '));	
+
+</script>
+</body>
+</html>
